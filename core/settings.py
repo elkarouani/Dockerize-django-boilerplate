@@ -147,6 +147,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'app/build/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+import mimetypes
+mimetypes.add_type("application/json", ".json", True)
+
 # Security tasks
 if ENVIRONMENT == 'production':
     SECURE_BROWSER_XSS_FILTER = True
