@@ -6,8 +6,12 @@ name = "pypi"
 [packages]
 django = "*"
 psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.8"
