@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "babel --watch static/js/src -d static/js/lib"
+    "watch-jsx": "babel --watch static/js/src -d static/js/lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
