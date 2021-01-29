@@ -3,7 +3,8 @@ version: '3.8'
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    # command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn core.wsgi -b 0.0.0.0:8000    
     environment:
       - ENVIRONMENT=development
       - SECRET_KEY=_=d0=yr$$%g0e5k%h40bp&eh5b71kb@qfgdl_ydqxv25rw!a0p*

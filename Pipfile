@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
