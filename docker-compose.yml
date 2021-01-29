@@ -3,25 +3,20 @@ version: '3.8'
 services:
   web:
     build: .
-    # command: python /code/manage.py runserver 0.0.0.0:8000
-    command: gunicorn core.wsgi -b 0.0.0.0:8000
-    environment:
-      - SECRET_KEY=lsb06)0_avq1lt0qo5!h5u)=*q$$gjf@7ys=&b54bb)e3gl%ekp
-      - DEBUG=1
-      - ENVIRONMENT=development
-    volumes: 
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
       - .:/code
     ports:
       - 8000:8000
     depends_on:
       - db
-
+  
   db:
     image: postgres:11
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
-    volumes: 
+    volumes:
       - postgres_data:/var/lib/postgresql/data/
 
 volumes:
